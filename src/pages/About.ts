@@ -146,7 +146,7 @@ export const About = (
     'glass rounded-[20px] p-10 text-center max-w-[400px] mx-auto';
 
   profileCard.innerHTML = `
-    <img src="https://avatars.githubusercontent.com/u/105788343?v=4"
+    <img src="../../public/assets/profile.JPG"
          alt="Xuxu"
          class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
     <h3 class="text-2xl font-bold text-[var(--text-primary)]">Chim Theara</h3>

@@ -8,20 +8,36 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
       :root {
-        --primary: #6366f1;
-        --primary-dark: #4f46e5;
-        --secondary: #06b6d4;
-        --accent: #f59e0b;
-        --bg-primary: #0f0f23;
-        --bg-secondary: #1a1a2e;
-        --bg-card: #16213e;
-        --text-primary: #ffffff;
-        --text-secondary: #a1a1aa;
+        /* Light mode colors */
+        --primary: #ef4444;
+        --primary-dark: #b91c1c;
+        --secondary: #3b82f6;
+        --accent: #fbbf24;
+        --bg-primary: #f9fafb;
+        --bg-secondary: #e5e7eb;
+        --bg-card: #ffffff;
+        --text-primary: #111827;
+        --text-secondary: #6b7280;
+        --glass-bg: rgba(255, 255, 255, 0.5);
+        --glass-border: rgba(0, 0, 0, 0.1);
+      }
+
+      [data-theme='dark'] {
+        /* Dark mode colors */
+        --primary: #ef4444;
+        --primary-dark: #b91c1c;
+        --secondary: #3b82f6;
+        --accent: #fbbf24;
+        --bg-primary: #111827;
+        --bg-secondary: #1f2937;
+        --bg-card: #1f2937;
+        --text-primary: #f9fafb;
+        --text-secondary: #9ca3af;
         --glass-bg: rgba(255, 255, 255, 0.1);
         --glass-border: rgba(255, 255, 255, 0.2);
       }
@@ -35,6 +51,8 @@
       body {
         font-family: 'Outfit', sans-serif;
         line-height: 1.6;
+        background: var(--bg-primary);
+        color: var(--text-primary);
       }
 
       /* Animated Background */
@@ -282,9 +300,9 @@
   >
     <div class="bg-animated"></div>
     <div id="app"></div>
-    <script type="module">
-      import { Router } from './src/router.ts';
-      new Router(document.getElementById('app'));
-    </script>
   </body>
+  <script type="module">
+    import { Router } from './src/router.ts';
+    new Router(document.getElementById('app'));
+  </script>
 </html>

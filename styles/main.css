@@ -6,6 +6,11 @@
   pointer-events: none;
   z-index: 0;
 }
+/* Example Tailwind dark mode class */
+html.dark {
+  --bg-color: #121212;
+  --text-primary: #ffffff;
+}
 
 @keyframes ripple {
   0% {
